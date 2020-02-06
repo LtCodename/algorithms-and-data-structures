@@ -4,7 +4,7 @@ const findArrayMean = arr => {
 };
 
 const findArrayMedian = arr => {
-    let sorted = arr.sort();
+    let sorted = arr.sort((a, b) => a - b);
     if (sorted.length % 2 === 0) {
         let half = sorted.length / 2;
         return (sorted[half] + sorted[half - 1]) / 2;
@@ -35,9 +35,9 @@ const findArrayMode = arr => {
 
 console.log(findArrayMean([1,2,3,4,5]));
 
-console.log(findArrayMedian([1,2,3,4,5,6,7,8,9,10,11,12,13]));
+console.log(findArrayMedian([1,2,3,4,5,6,7,8,9,10,11,12]));
 
-console.log(findArrayMode([1,1,1,1,2,3,3,3,4,5,5,5,6,6,6,6]));
+console.log(findArrayMode([1,1,1,1,2,3,3,3,4,5,5,5,6,6,6,6,6]));
 
 class Stats {
     constructor(array) {
