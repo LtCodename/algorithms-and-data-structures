@@ -1,15 +1,14 @@
 const printPyramid = levels => {
     let pyramid = '';
     //const width = 2 * levels - 1;
-    let spaces = (levels - 1) * 2;
+    let spacesHalf = levels - 1;
     const RETURN = '\n';
     const GAP = ' ';
     const BLOCK = '#';
 
     for (let i = 1; i <= levels; i++) {
-        let spaceHalf = spaces / 2;
 
-        for (let y = 1; y <= spaceHalf; y++) {
+        for (let y = 1; y <= spacesHalf; y++) {
             pyramid += GAP;
         }
 
@@ -20,12 +19,12 @@ const printPyramid = levels => {
             }
         }
 
-        for (let v = 1; v <= spaceHalf; v++) {
+        for (let v = 1; v <= spacesHalf; v++) {
             pyramid += GAP;
         }
 
         pyramid += RETURN;
-        spaces -= 2;
+        spacesHalf -= 1;
     }
     return pyramid;
 };
