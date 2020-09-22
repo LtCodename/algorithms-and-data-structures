@@ -7,6 +7,8 @@ const calculateFibonacci = number => {
     for (let i = 0; i < number; i++) {
         array.push(i + 1);
     }
+
+    console.log(array)
     for (let i = array.length; i > array.length - 3; i--) {
         if (i === number) continue;
         answer += i;
@@ -15,7 +17,7 @@ const calculateFibonacci = number => {
     return answer;
 };
 
-console.log(calculateFibonacci(-6));
+console.log(calculateFibonacci(5));
 
 const fibonacci = element =>
     // if (element < 0) throw new Error("Index cannot be negative");

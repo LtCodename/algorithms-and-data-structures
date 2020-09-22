@@ -1,3 +1,4 @@
+/*
 const isPalindrome = string => {
     const validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
     const stringCharacters = string
@@ -29,4 +30,48 @@ const __isPalindrome = string => {
 
 console.log(isPalindrome('mariia'));
 console.log(_isPalindrome('qw'));
-console.log(__isPalindrome('maRiIa'));
+console.log(__isPalindrome('maRiIa'));*/
+
+
+
+//
+// fb = (nth) => {
+//
+//     let array = [0,1]
+//     //return array[nth] if nth < 2
+//
+//
+//     let count = 2;
+//
+//
+//     do {
+//         array.push(array[count - 2] + array[count - 1]);
+//         count ++;
+//     } while (count <= nth)
+//
+//     return array[nth];
+// }
+//
+//
+// console.log(fb(10))
+
+
+
+reduce = (array, callback, startValue) => {
+    let result = startValue;
+
+    for (let i = 0; i < array.length; i++) {
+        //console.log(array[i])
+        //console.log(result)
+        result = callback(result, array[i]);
+    }
+
+    return result;
+
+
+}
+
+console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0))
+
+
+
